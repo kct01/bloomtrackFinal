@@ -1,0 +1,425 @@
+/* WeeklyInfo Component Styles */
+
+.weeklyInfo {
+  font-family: var(--font-family-primary);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.weekTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.weekNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.trimesterBadge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+/* Content Styles */
+.content {
+  background-color: var(--color-background-primary);
+  padding: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sectionIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Baby Size Section */
+.babySize {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sizeComparison {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.sizeText {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.sizeName {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.measurements {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.measurement {
+  background-color: var(--color-background-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-primary);
+}
+
+/* Lists */
+.milestoneList,
+.changesList,
+.tipsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.milestone,
+.change,
+.tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-background-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border-primary);
+  transition: all 0.2s ease;
+}
+
+.milestone:hover,
+.change:hover,
+.tip:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.milestone::before {
+  content: '(';
+  font-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.change::before {
+  content: '=ù';
+  font-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.tip::before {
+  content: '=°';
+  font-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.milestoneText,
+.changeText,
+.tipText {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+/* Detailed Variant */
+.detailed {
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-primary);
+  box-shadow: var(--shadow-card);
+}
+
+/* Compact Variant */
+.compact {
+  background-color: var(--color-background-secondary);
+  border: 1px solid var(--color-border-primary);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.compactHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.compact .weekNumber {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.compact .babySize {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-primary-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.compactContent {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.highlightMilestone {
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.highlightMilestone::before {
+  content: '(';
+  font-size: 1rem;
+}
+
+/* Card Variant */
+.card {
+  background: linear-gradient(135deg, var(--color-background-primary) 0%, var(--color-background-secondary) 100%);
+  border: 1px solid var(--color-border-primary);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.card .weekTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card .weekNumber {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.card .trimesterBadge {
+  background-color: var(--color-primary);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 12px;
+  align-self: flex-start;
+}
+
+.card .babySize {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent-light);
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  color: var(--color-accent-dark);
+}
+
+.babySizeIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.card .sizeName {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.keyMilestone,
+.keyTip {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-background-primary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border-primary);
+}
+
+.milestoneIcon,
+.tipIcon {
+  width: 18px;
+  height: 18px;
+  margin-top: 0.125rem;
+  color: var(--color-primary);
+}
+
+.keyMilestone .milestoneText,
+.keyTip .tipText {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .weekTitle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .weekNumber {
+    font-size: 1.25rem;
+  }
+
+  .measurements {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .card .babySize {
+    align-self: flex-start;
+  }
+
+  .compactHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .milestone,
+  .change,
+  .tip,
+  .card {
+    transition: none;
+  }
+
+  .milestone:hover,
+  .change:hover,
+  .tip:hover,
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .weeklyInfo {
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .milestone,
+  .change,
+  .tip {
+    border: 2px solid var(--color-text-secondary);
+  }
+
+  .trimesterBadge {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .weeklyInfo {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .header {
+    background: #f5f5f5 !important;
+    color: #333 !important;
+  }
+
+  .milestone:hover,
+  .change:hover,
+  .tip:hover,
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

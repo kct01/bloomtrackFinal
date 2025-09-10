@@ -1,0 +1,407 @@
+/* Award Display Styles */
+
+.awardDisplay {
+  width: 100%;
+}
+
+/* Variant Styles */
+.dashboard {
+  background: linear-gradient(135deg, rgba(244, 166, 205, 0.05), rgba(255, 181, 167, 0.05));
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(244, 166, 205, 0.1);
+}
+
+.profile {
+  padding: 1rem 0;
+}
+
+.compact {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0.75rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titleSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2D2A24;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title::before {
+  content: '🏆';
+  font-size: 1.5rem;
+}
+
+.stats {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.totalCount {
+  font-size: 0.875rem;
+  color: #6B6862;
+  font-weight: 500;
+}
+
+.newCount {
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  animation: gentle-pulse 2s infinite;
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Category Filter */
+.categoryFilter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.categoryButton {
+  padding: 0.5rem 1rem;
+  border: 2px solid #F5F3F0;
+  background: white;
+  color: #6B6862;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.categoryButton:hover {
+  border-color: #F4A6CD;
+  background: rgba(244, 166, 205, 0.05);
+}
+
+.categoryButton.active {
+  border-color: #F4A6CD;
+  background: linear-gradient(135deg, #F4A6CD, #FFB5A7);
+  color: white;
+}
+
+/* Awards Grid */
+.awardsGrid {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.dashboard .awardsGrid {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  max-width: 600px;
+}
+
+.profile .awardsGrid {
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+}
+
+.compact .awardsGrid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.ribbonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Show More */
+.showMore {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6B6862;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.emptyTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2D2A24;
+  margin: 0 0 0.75rem;
+}
+
+.emptyMessage {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Modal Styles */
+.awardModal {
+  max-width: 500px;
+  width: 90vw;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.modalRibbon {
+  display: flex;
+  justify-content: center;
+}
+
+.modalDetails {
+  text-align: center;
+  width: 100%;
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2D2A24;
+  margin: 0 0 0.75rem;
+}
+
+.modalDescription {
+  font-size: 1rem;
+  color: #6B6862;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.modalStats {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(244, 166, 205, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(244, 166, 205, 0.1);
+}
+
+.statItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statLabel {
+  font-weight: 500;
+  color: #6B6862;
+}
+
+.statValue {
+  font-weight: 600;
+  color: #2D2A24;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* All Awards Modal */
+.allAwardsModal {
+  max-width: 800px;
+  width: 95vw;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.allAwardsContent {
+  padding: 2rem;
+}
+
+.allAwardsTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2D2A24;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.allAwardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-items: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .titleSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .stats {
+    gap: 0.75rem;
+  }
+
+  .categoryFilter {
+    gap: 0.25rem;
+  }
+
+  .categoryButton {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .dashboard .awardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .profile .awardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+  }
+
+  .compact .awardsGrid {
+    gap: 0.75rem;
+  }
+
+  .modalContent {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .modalTitle {
+    font-size: 1.25rem;
+  }
+
+  .modalStats {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .allAwardsContent {
+    padding: 1rem;
+  }
+
+  .allAwardsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .allAwardsTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .dashboard .awardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile .awardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categoryFilter {
+    justify-content: center;
+  }
+
+  .emptyIcon {
+    font-size: 3rem;
+  }
+
+  .emptyTitle {
+    font-size: 1.125rem;
+  }
+
+  .emptyMessage {
+    font-size: 0.9rem;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .categoryButton {
+    border-width: 3px;
+  }
+
+  .categoryButton.active {
+    border-color: #000;
+    background: #000;
+  }
+
+  .modalStats {
+    border-color: #000;
+    border-width: 2px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .newCount {
+    animation: none;
+  }
+
+  .ribbonWrapper * {
+    transition: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .categoryFilter,
+  .showMore,
+  .modalActions {
+    display: none;
+  }
+
+  .awardsGrid {
+    break-inside: avoid;
+  }
+}

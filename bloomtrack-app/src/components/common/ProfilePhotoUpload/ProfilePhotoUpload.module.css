@@ -1,0 +1,256 @@
+/* Profile Photo Upload Component Styles */
+
+.profilePhotoUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.photoContainer {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--color-soft-pink);
+  background-color: var(--color-white);
+  transition: all var(--transition-normal);
+}
+
+.photoContainer:hover {
+  border-color: var(--color-warm-peach);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(244, 166, 205, 0.2);
+}
+
+/* Current Photo Display */
+.currentPhoto {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.photoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.currentPhoto:hover .photoOverlay {
+  opacity: 1;
+}
+
+.changeButton,
+.removeButton {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: var(--font-medium);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.changeButton:hover,
+.removeButton:hover {
+  background: white;
+  transform: translateY(-1px);
+}
+
+.removeButton {
+  background: rgba(255, 0, 0, 0.1);
+  color: #d32f2f;
+}
+
+.removeButton:hover {
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/* Upload Placeholder */
+.uploadPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-2);
+  background: linear-gradient(135deg, 
+    rgba(244, 166, 205, 0.1), 
+    rgba(255, 181, 167, 0.1)
+  );
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.uploadPlaceholder:hover {
+  background: linear-gradient(135deg, 
+    rgba(244, 166, 205, 0.2), 
+    rgba(255, 181, 167, 0.2)
+  );
+}
+
+.placeholderIcon {
+  font-size: 2rem;
+  color: var(--color-soft-pink);
+  margin-bottom: var(--space-1);
+}
+
+.placeholderText {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-text-medium);
+  margin: 0;
+  text-align: center;
+}
+
+.uploadButton {
+  background: var(--color-soft-pink);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: var(--space-1);
+}
+
+.uploadButton:hover {
+  background: var(--color-warm-peach);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(244, 166, 205, 0.3);
+}
+
+.uploadButton:disabled {
+  background: var(--color-soft-gray);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Upload Progress */
+.uploadProgress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  width: 100%;
+  max-width: 200px;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: rgba(244, 166, 205, 0.2);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-soft-pink), var(--color-warm-peach));
+  transition: width var(--transition-normal);
+  border-radius: var(--radius-full);
+}
+
+.progressText {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--color-soft-pink);
+  min-width: 40px;
+  text-align: right;
+}
+
+/* Error Message */
+.errorMessage {
+  background: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  text-align: center;
+  border: 1px solid rgba(211, 47, 47, 0.2);
+}
+
+/* File Info */
+.fileInfo {
+  text-align: center;
+}
+
+.fileInfoText {
+  color: var(--color-text-light);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .photoContainer {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .placeholderIcon {
+    font-size: 1.5rem;
+  }
+  
+  .uploadButton {
+    padding: var(--space-1) var(--space-2);
+    font-size: var(--text-xs);
+  }
+  
+  .changeButton,
+  .removeButton {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+}
+
+/* Pregnancy Theme Integration */
+.profilePhotoUpload.pregnancy-theme .photoContainer {
+  border-color: var(--color-sage-green);
+}
+
+.profilePhotoUpload.pregnancy-theme .photoContainer:hover {
+  border-color: var(--color-sage-green);
+  box-shadow: 0 4px 12px rgba(168, 216, 168, 0.2);
+}
+
+.profilePhotoUpload.pregnancy-theme .uploadButton {
+  background: var(--color-sage-green);
+}
+
+.profilePhotoUpload.pregnancy-theme .uploadButton:hover {
+  background: var(--color-sage-green);
+  filter: brightness(1.1);
+}
+
+.profilePhotoUpload.pregnancy-theme .progressFill {
+  background: linear-gradient(90deg, var(--color-sage-green), var(--color-sage-green));
+}
+
+.profilePhotoUpload.pregnancy-theme .progressText {
+  color: var(--color-sage-green);
+}

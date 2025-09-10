@@ -1,0 +1,559 @@
+/* Modal Component Styles */
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  animation: fadeIn 0.3s ease-out;
+  backdrop-filter: blur(2px);
+}
+
+.backdrop_celebration {
+  background: linear-gradient(
+    45deg,
+    rgba(244, 166, 205, 0.3),
+    rgba(255, 181, 167, 0.3),
+    rgba(200, 168, 233, 0.3),
+    rgba(168, 216, 168, 0.3)
+  );
+  background-size: 400% 400%;
+  animation: fadeIn 0.3s ease-out, gradientShift 4s ease-in-out infinite;
+}
+
+/* Modal Container */
+.modal {
+  background-color: var(--color-white);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-strong);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideInUp 0.3s ease-out;
+  border: 1px solid var(--color-soft-gray);
+}
+
+/* Size Variants */
+.small {
+  max-width: 400px;
+  width: 100%;
+}
+
+.medium {
+  max-width: 600px;
+  width: 100%;
+}
+
+.large {
+  max-width: 800px;
+  width: 100%;
+}
+
+.extraLarge {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.fullScreen {
+  max-width: 95vw;
+  max-height: 95vh;
+  width: 95vw;
+  height: 95vh;
+}
+
+/* Modal Variants */
+
+/* Default Modal */
+.default {
+  background-color: var(--color-white);
+}
+
+/* Celebration Modal - For Milestone Achievements */
+.celebration {
+  background: linear-gradient(135deg, var(--color-white), var(--color-light-cream));
+  border: 2px solid var(--color-soft-pink);
+  box-shadow: var(--shadow-celebration);
+  position: relative;
+  overflow: hidden;
+}
+
+.celebration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, 
+    var(--color-soft-pink), 
+    var(--color-warm-peach), 
+    var(--color-gentle-lavender), 
+    var(--color-sage-green)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+/* Gentle Modal - For Sensitive Content */
+.gentle {
+  background: linear-gradient(135deg, var(--color-warm-white), var(--color-light-cream));
+  border: 1px solid var(--color-gentle-lavender);
+}
+
+/* Support Modal - For Help and Community */
+.support {
+  background: linear-gradient(135deg, var(--color-white), var(--color-trimester-3));
+  border: 2px solid var(--color-sage-green);
+}
+
+/* Warning Modal - For Important Information */
+.warning {
+  background: linear-gradient(135deg, var(--color-white), #FFF3CD);
+  border: 2px solid var(--color-warning);
+}
+
+/* Success Modal - For Positive Feedback */
+.success {
+  background: linear-gradient(135deg, var(--color-white), #D1E7DD);
+  border: 2px solid var(--color-success);
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  background-color: var(--color-light-cream);
+  border: none;
+  border-radius: var(--radius-full);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  z-index: 10;
+}
+
+.closeButton:hover {
+  background-color: var(--color-soft-pink);
+  color: white;
+  transform: scale(1.1);
+}
+
+.closeButton:focus {
+  outline: 2px solid var(--color-soft-pink);
+  outline-offset: 2px;
+}
+
+/* Header */
+.header {
+  padding: var(--space-6) var(--space-6) var(--space-4);
+  border-bottom: 1px solid var(--color-soft-gray);
+  background: linear-gradient(135deg, var(--color-light-cream), var(--color-warm-white));
+  position: relative;
+}
+
+.celebration .header {
+  background: linear-gradient(135deg, var(--color-trimester-1), var(--color-warm-white));
+  border-bottom-color: rgba(244, 166, 205, 0.2);
+}
+
+/* Celebration Icons */
+.celebrationIcons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sparkle1,
+.sparkle2,
+.sparkle3,
+.sparkle4 {
+  position: absolute;
+  color: var(--color-soft-pink);
+  opacity: 0.6;
+}
+
+.sparkle1 {
+  top: 20%;
+  left: 10%;
+  animation: sparkleFloat 3s ease-in-out infinite;
+}
+
+.sparkle2 {
+  top: 30%;
+  right: 15%;
+  animation: sparkleFloat 3s ease-in-out infinite 0.5s;
+  color: var(--color-warm-peach);
+}
+
+.sparkle3 {
+  bottom: 25%;
+  left: 20%;
+  animation: sparkleFloat 3s ease-in-out infinite 1s;
+  color: var(--color-gentle-lavender);
+}
+
+.sparkle4 {
+  top: 15%;
+  right: 30%;
+  animation: sparkleFloat 3s ease-in-out infinite 1.5s;
+  color: var(--color-sage-green);
+}
+
+/* Header Content */
+.headerContent {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.headerIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--color-soft-pink), var(--color-warm-peach));
+  color: white;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-medium);
+}
+
+.celebration .headerIcon {
+  animation: gentle-pulse 2s infinite;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--space-2);
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: var(--text-base);
+  color: var(--color-text-medium);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Content */
+.content {
+  padding: var(--space-6);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Footer */
+.footer {
+  padding: var(--space-4) var(--space-6) var(--space-6);
+  border-top: 1px solid var(--color-soft-gray);
+  background-color: var(--color-light-cream);
+}
+
+/* Footer Variants */
+.confirmFooter,
+.celebrationFooter,
+.formFooter {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.celebrationFooter {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Celebration Specific Content */
+.celebrationContent {
+  text-align: center;
+  padding: var(--space-4) 0;
+}
+
+.milestoneIcon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+  animation: celebration-bounce 1s ease-out;
+}
+
+.celebrationText {
+  font-size: var(--text-lg);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--space-4);
+  line-height: var(--leading-relaxed);
+}
+
+.weekBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-soft-pink), var(--color-warm-peach));
+  color: white;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-soft);
+}
+
+.encouragement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background-color: var(--color-warm-white);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  font-style: italic;
+}
+
+.heartIcon {
+  color: var(--color-soft-pink);
+  animation: heart-beat 2s infinite;
+}
+
+/* Confirm Modal Content */
+.confirmMessage {
+  font-size: var(--text-base);
+  color: var(--color-text-dark);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .backdrop {
+    padding: var(--space-2);
+    align-items: flex-end;
+  }
+  
+  .modal {
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    max-height: 95vh;
+    animation: slideInUp 0.3s ease-out;
+  }
+  
+  .small,
+  .medium,
+  .large,
+  .extraLarge {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .header {
+    padding: var(--space-4) var(--space-4) var(--space-3);
+  }
+  
+  .content {
+    padding: var(--space-4);
+  }
+  
+  .footer {
+    padding: var(--space-3) var(--space-4) var(--space-4);
+  }
+  
+  .headerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-3);
+  }
+  
+  .title {
+    font-size: var(--text-xl);
+  }
+  
+  .confirmFooter,
+  .celebrationFooter,
+  .formFooter {
+    flex-direction: column-reverse;
+    gap: var(--space-2);
+  }
+  
+  .celebrationFooter {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .backdrop {
+    padding: 0;
+  }
+  
+  .modal {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    max-height: 100vh;
+  }
+  
+  .closeButton {
+    top: var(--space-2);
+    right: var(--space-2);
+  }
+  
+  .milestoneIcon {
+    font-size: 3rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes sparkleFloat {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+    opacity: 0.6; 
+  }
+  50% { 
+    transform: translateY(-10px) rotate(180deg); 
+    opacity: 1; 
+  }
+}
+
+@keyframes celebration-bounce {
+  0%, 20%, 53%, 80%, 100% { 
+    transform: translateY(0); 
+  }
+  40%, 43% { 
+    transform: translateY(-20px); 
+  }
+  70% { 
+    transform: translateY(-10px); 
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 1; 
+  }
+  50% { 
+    transform: scale(1.05); 
+    opacity: 0.9; 
+  }
+}
+
+@keyframes heart-beat {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .modal {
+    animation: none;
+  }
+  
+  .backdrop {
+    animation: none;
+  }
+  
+  .sparkle1,
+  .sparkle2,
+  .sparkle3,
+  .sparkle4,
+  .milestoneIcon,
+  .headerIcon,
+  .heartIcon {
+    animation: none;
+  }
+  
+  .celebration::before {
+    animation: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .modal {
+    border: 3px solid var(--color-text-dark);
+  }
+  
+  .header {
+    border-bottom: 2px solid var(--color-text-dark);
+  }
+  
+  .footer {
+    border-top: 2px solid var(--color-text-dark);
+  }
+}
+
+/* Focus Management */
+.modal:focus {
+  outline: none;
+}
+
+/* Scroll Behavior */
+.content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: var(--color-light-cream);
+  border-radius: var(--radius-full);
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--color-soft-pink);
+  border-radius: var(--radius-full);
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-warm-peach);
+}

@@ -1,0 +1,444 @@
+/* Profile Page Styles */
+
+.profilePage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--theme-background), var(--theme-light));
+  padding: var(--space-4) var(--space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+  margin-bottom: var(--space-8);
+}
+
+.welcomeSection {
+  text-align: center;
+  padding: var(--space-6) 0;
+}
+
+.pageTitle {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--space-3);
+}
+
+.pageSubtitle {
+  font-size: var(--text-lg);
+  color: var(--color-text-medium);
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tab Navigation */
+.tabNavigation {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2);
+  box-shadow: var(--shadow-soft);
+  overflow-x: auto;
+}
+
+.tab {
+  flex: 1;
+  padding: var(--space-3) var(--space-4);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-weight: var(--font-medium);
+  color: var(--color-text-medium);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.tab:hover {
+  background: var(--theme-light);
+  color: var(--color-text-dark);
+}
+
+.activeTab {
+  background: var(--theme-primary);
+  color: var(--color-white);
+  font-weight: var(--font-semibold);
+}
+
+.activeTab:hover {
+  background: var(--theme-primary);
+  color: var(--color-white);
+}
+
+/* Tab Content */
+.tabContent {
+  background: var(--color-white);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-medium);
+  min-height: 400px;
+}
+
+/* General Section */
+.generalSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.settingsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-6);
+}
+
+.settingCard {
+  background: var(--color-light-cream);
+  border: 2px solid var(--color-soft-gray);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  transition: all var(--transition-normal);
+}
+
+.settingCard:hover {
+  border-color: var(--theme-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.settingCard h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--space-4);
+}
+
+.cardDescription {
+  color: var(--color-text-medium);
+  margin: 0 0 var(--space-4);
+  line-height: 1.6;
+}
+
+.infoGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-soft-gray);
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-dark);
+}
+
+.value {
+  color: var(--theme-primary);
+  font-weight: var(--font-medium);
+}
+
+/* Theme Section */
+.themeSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.currentThemeInfo {
+  background: linear-gradient(135deg, var(--theme-background), var(--theme-light));
+  border: 2px solid var(--theme-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+}
+
+.currentThemeInfo h3 {
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-dark);
+  margin: 0 0 var(--space-4);
+}
+
+.themePreview {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.colorSwatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Pregnancy Section */
+.pregnancySection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.pregnancyInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+/* Privacy Section */
+.privacySection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.privacyOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.privacyItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background: var(--color-white);
+  border: 1px solid var(--color-soft-gray);
+  border-radius: var(--radius-lg);
+}
+
+.privacyStatus {
+  font-weight: var(--font-semibold);
+  color: var(--color-success);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profilePage {
+    padding: var(--space-3) var(--space-4);
+  }
+  
+  .tabContent {
+    padding: var(--space-4);
+  }
+  
+  .settingsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .pregnancyInfo {
+    grid-template-columns: 1fr;
+  }
+  
+  .tabNavigation {
+    padding: var(--space-1);
+  }
+  
+  .tab {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+  }
+}
+
+/* Baby Details Form Styling */
+.babyDetailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2D2A24;
+  margin: 0;
+}
+
+.formInput {
+  padding: 0.75rem;
+  border: 2px solid #F5F3F0;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: #2D2A24;
+  background: white;
+  transition: border-color 0.2s ease;
+}
+
+.formInput:focus {
+  outline: none;
+  border-color: #F4A6CD;
+  box-shadow: 0 0 0 3px rgba(244, 166, 205, 0.1);
+}
+
+.formInput::placeholder {
+  color: #6B6862;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.genderOptions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.genderButton {
+  flex: 1;
+  min-width: 80px;
+  padding: 0.75rem 0.5rem;
+  border: 2px solid #F5F3F0;
+  border-radius: 0.5rem;
+  background: white;
+  color: #2D2A24;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.genderButton:hover {
+  border-color: #F4A6CD;
+  background: rgba(244, 166, 205, 0.05);
+}
+
+.genderButton.active {
+  border-color: #F4A6CD;
+  background: rgba(244, 166, 205, 0.1);
+  color: #F4A6CD;
+  font-weight: 600;
+}
+
+.formActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.formActions button {
+  flex: 1;
+}
+
+.saveButton {
+  background: linear-gradient(135deg, #F4A6CD, #FFB5A7) !important;
+  color: white !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.saveButton:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(244, 166, 205, 0.3) !important;
+}
+
+.photoButton {
+  background: rgba(244, 166, 205, 0.1) !important;
+  color: #F4A6CD !important;
+  border: 1px solid rgba(244, 166, 205, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .genderOptions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .genderButton {
+    min-width: auto;
+    flex: none;
+  }
+
+  .formActions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageTitle {
+    font-size: var(--text-2xl);
+  }
+  
+  .pageSubtitle {
+    font-size: var(--text-base);
+  }
+  
+  .settingCard {
+    padding: var(--space-4);
+  }
+  
+  .currentThemeInfo {
+    padding: var(--space-4);
+  }
+}
+
+/* General Information Edit Form Styles */
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.editActions {
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.editNote {
+  font-size: var(--text-sm);
+  color: var(--color-text-light);
+  font-style: italic;
+  margin-left: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .editActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .editActions button {
+    width: 100%;
+  }
+}

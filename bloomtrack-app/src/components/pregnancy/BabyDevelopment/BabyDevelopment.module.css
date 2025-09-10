@@ -1,0 +1,510 @@
+/* BabyDevelopment Component Styles */
+
+.babyDevelopment {
+  font-family: var(--font-family-primary);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--color-background-primary);
+  border: 1px solid var(--color-border-primary);
+  box-shadow: var(--shadow-card);
+}
+
+/* Header Styles */
+.header {
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
+  padding: 1.5rem;
+  color: white;
+}
+
+.weekInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weekIcon {
+  width: 32px;
+  height: 32px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 6px;
+  backdrop-filter: blur(10px);
+}
+
+.weekDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.trimester {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Content Styles */
+.content {
+  padding: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sectionIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-primary);
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+/* Size Display */
+.sizeDisplay {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.comparison {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+  border-radius: 12px;
+  color: white;
+}
+
+.comparisonText {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.comparisonItem {
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.measurements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.measurement {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-background-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border-primary);
+}
+
+.measurementIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-secondary);
+}
+
+.measurementLabel {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+.measurementValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* Development Lists */
+.developmentList,
+.organList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.developmentItem,
+.organItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-background-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border-primary);
+  transition: all 0.2s ease;
+}
+
+.developmentItem:hover,
+.organItem:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.developmentItem::before {
+  content: '<1';
+  font-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.organItem::before {
+  content: 'd';
+  font-size: 1rem;
+  margin-top: 0.125rem;
+}
+
+.developmentText,
+.organText {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  flex: 1;
+}
+
+/* Senses Grid */
+.sensesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.sensesCategory {
+  background-color: var(--color-background-secondary);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid var(--color-border-primary);
+}
+
+.categoryTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+}
+
+.sensesList,
+.movementsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.senseItem,
+.movementItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+.senseIcon,
+.movementIcon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-primary);
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+/* Highlights */
+.highlights {
+  background: linear-gradient(135deg, var(--color-success-light) 0%, var(--color-success) 100%);
+  padding: 1.5rem;
+  border-radius: 12px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.highlightsHeader {
+  margin-bottom: 1rem;
+}
+
+.highlightsTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.highlightsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.highlightIcon {
+  font-size: 1.125rem;
+}
+
+.highlightText {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* Card Variant */
+.card {
+  background: linear-gradient(135deg, var(--color-background-primary) 0%, var(--color-background-secondary) 100%);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.cardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.cardTitle .weekIcon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: 4px;
+}
+
+.cardSize {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-accent-light);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: var(--color-accent-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.cardSizeIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.keyDevelopment,
+.keyHighlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: var(--color-background-primary);
+  border-radius: 12px;
+  border: 1px solid var(--color-border-primary);
+}
+
+.keyIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+  margin-top: 0.125rem;
+}
+
+.keyDevelopment span,
+.keyHighlight span {
+  font-size: 0.9375rem;
+  line-height: 1.4;
+  color: var(--color-text-primary);
+}
+
+/* Compact Variant */
+.compact {
+  background-color: var(--color-background-secondary);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.compactContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.compactInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.compactWeek {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.compactSize {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  background-color: var(--color-primary-light);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+}
+
+.compactDevelopment {
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-primary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .measurements {
+    grid-template-columns: 1fr;
+  }
+
+  .sensesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .cardSize {
+    align-self: flex-start;
+  }
+
+  .compactInfo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .developmentItem,
+  .organItem,
+  .card {
+    transition: none;
+  }
+
+  .developmentItem:hover,
+  .organItem:hover,
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .babyDevelopment {
+    border: 2px solid var(--color-text-primary);
+  }
+
+  .developmentItem,
+  .organItem,
+  .measurement,
+  .sensesCategory {
+    border: 2px solid var(--color-text-secondary);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .babyDevelopment {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+
+  .header {
+    background: #f5f5f5 !important;
+    color: #333 !important;
+  }
+
+  .highlights {
+    background: #f0f0f0 !important;
+    color: #333 !important;
+  }
+
+  .comparison {
+    background: #f5f5f5 !important;
+    color: #333 !important;
+  }
+
+  .developmentItem:hover,
+  .organItem:hover,
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

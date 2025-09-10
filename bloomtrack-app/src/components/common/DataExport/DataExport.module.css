@@ -1,0 +1,307 @@
+/* Data Export Component Styles */
+
+.dataExport {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-2);
+}
+
+.header h3 {
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+}
+
+.description {
+  color: var(--color-text-medium);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Section Styles */
+.section {
+  background: var(--color-white);
+  border: 2px solid var(--color-soft-gray);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+}
+
+.section h4 {
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: var(--font-semibold);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Format Options */
+.formatOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.formatOption {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 2px solid rgba(244, 166, 205, 0.2);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.formatOption:hover {
+  border-color: rgba(244, 166, 205, 0.4);
+  background: rgba(244, 166, 205, 0.05);
+}
+
+.formatOption input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-soft-pink);
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.formatOption input[type="radio"]:checked + .formatInfo {
+  color: var(--color-text-dark);
+}
+
+.formatInfo {
+  flex: 1;
+}
+
+.formatInfo strong {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-1);
+}
+
+.formatInfo p {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Data Options */
+.dataOptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.dataOption {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border: 1px solid rgba(244, 166, 205, 0.2);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.dataOption:hover {
+  border-color: rgba(244, 166, 205, 0.4);
+  background: rgba(244, 166, 205, 0.05);
+}
+
+.dataOption input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-soft-pink);
+  flex-shrink: 0;
+}
+
+.dataOption span {
+  font-size: var(--text-base);
+  color: var(--color-text-dark);
+  font-weight: var(--font-medium);
+}
+
+.dataOption input[type="checkbox"]:checked + span {
+  color: var(--color-soft-pink);
+  font-weight: var(--font-semibold);
+}
+
+/* Export Info */
+.exportInfo {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(244, 166, 205, 0.1);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(244, 166, 205, 0.2);
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.infoLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  font-weight: var(--font-medium);
+}
+
+.infoValue {
+  font-size: var(--text-base);
+  color: var(--color-text-dark);
+  font-weight: var(--font-semibold);
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  text-align: center;
+}
+
+.exportButton {
+  background: linear-gradient(135deg, var(--color-sage-green), var(--color-sage-green)) !important;
+  color: white !important;
+  border: none !important;
+  padding: var(--space-3) var(--space-6) !important;
+  font-size: var(--text-base) !important;
+  font-weight: var(--font-semibold) !important;
+  min-width: 160px;
+}
+
+.exportButton:hover:not(:disabled) {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(168, 216, 168, 0.3) !important;
+  filter: brightness(1.1) !important;
+}
+
+.exportButton:disabled {
+  background: var(--color-soft-gray) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+  filter: none !important;
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 400px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .dataExport {
+    padding: 0 var(--space-2);
+  }
+  
+  .section {
+    padding: var(--space-4);
+  }
+  
+  .formatOption {
+    padding: var(--space-3);
+  }
+  
+  .formatOption {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .formatOption input[type="radio"] {
+    margin-bottom: var(--space-2);
+  }
+  
+  .exportInfo {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .actions {
+    padding: var(--space-3);
+  }
+  
+  .exportButton {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+/* Loading State */
+.exportButton:disabled {
+  position: relative;
+  overflow: hidden;
+}
+
+.exportButton:disabled::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Accessibility */
+.formatOption:focus-within,
+.dataOption:focus-within {
+  outline: 2px solid var(--color-soft-pink);
+  outline-offset: 2px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .section {
+    background: var(--color-gray-dark);
+    border-color: var(--color-gray-medium);
+  }
+  
+  .formatOption,
+  .dataOption {
+    border-color: rgba(244, 166, 205, 0.3);
+  }
+  
+  .formatOption:hover,
+  .dataOption:hover {
+    background: rgba(244, 166, 205, 0.1);
+  }
+  
+  .exportInfo {
+    background: rgba(244, 166, 205, 0.15);
+    border-color: rgba(244, 166, 205, 0.3);
+  }
+}

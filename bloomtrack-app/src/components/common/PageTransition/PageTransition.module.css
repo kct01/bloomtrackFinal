@@ -1,0 +1,17 @@
+.pageTransition {
+  width: 100%;
+  min-height: 100vh;
+  will-change: transform, opacity;
+}
+
+/* Ensure smooth transitions on all child elements */
+.pageTransition * {
+  will-change: auto;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .pageTransition {
+    transition: none;
+  }
+}

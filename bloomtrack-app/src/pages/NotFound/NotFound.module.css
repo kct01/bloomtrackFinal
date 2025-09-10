@@ -1,0 +1,234 @@
+/* NotFound Page Styles */
+
+.notFound {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FFF8F0 0%, #FEFCF8 50%, #FAF7F2 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating decorative elements */
+.decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decoration {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.3;
+  user-select: none;
+}
+
+.decoration:nth-child(1) {
+  top: 10%;
+  left: 15%;
+}
+
+.decoration:nth-child(2) {
+  top: 20%;
+  right: 20%;
+}
+
+.decoration:nth-child(3) {
+  bottom: 15%;
+  left: 25%;
+}
+
+/* Main content */
+.content {
+  text-align: center;
+  max-width: 600px;
+  z-index: 2;
+  position: relative;
+}
+
+.icon {
+  font-size: 8rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  cursor: pointer;
+  user-select: none;
+  filter: drop-shadow(0 4px 8px rgba(244, 166, 205, 0.3));
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #F4A6CD;
+  margin: 0 0 1.5rem;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(244, 166, 205, 0.2);
+}
+
+.message {
+  font-size: 1.25rem;
+  color: #6B6862;
+  margin: 0 0 3rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Action buttons */
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(244, 166, 205, 0.2);
+}
+
+.primaryButton {
+  background: linear-gradient(135deg, #F4A6CD, #FFB5A7);
+  color: white;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(244, 166, 205, 0.4);
+}
+
+.secondaryButton {
+  background: linear-gradient(135deg, #C8A8E9, #A8D8A8);
+  color: white;
+}
+
+.secondaryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 168, 233, 0.4);
+}
+
+/* Tip section */
+.tip {
+  background: linear-gradient(135deg, #ffffff, #FEFCF8);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 2px solid #F5F3F0;
+  box-shadow: 0 8px 25px rgba(244, 166, 205, 0.1);
+  margin-bottom: 2rem;
+}
+
+.tip p {
+  margin: 0;
+  color: #2D2A24;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.tip strong {
+  color: #F4A6CD;
+}
+
+/* Pregnancy info section */
+.pregnancyInfo {
+  background: linear-gradient(135deg, #F4A6CD, #FFB5A7);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(244, 166, 205, 0.3);
+}
+
+.weekBadge {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.pregnancyInfo p {
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .notFound {
+    padding: 1rem;
+  }
+
+  .icon {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .message {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+    padding: 0.875rem 1.25rem;
+  }
+
+  .tip {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tip p {
+    font-size: 0.9rem;
+  }
+
+  .decoration {
+    font-size: 1.5rem;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .decoration {
+    animation: none;
+  }
+
+  .primaryButton:hover,
+  .secondaryButton:hover {
+    transform: none;
+  }
+}

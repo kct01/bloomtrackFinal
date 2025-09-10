@@ -1,0 +1,398 @@
+/* Editor Container */
+.editorContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Achievement Notification */
+.achievementNotification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  z-index: 1000;
+  max-width: 350px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.achievementContent h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.achievementItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.achievementIcon {
+  font-size: 1.5rem;
+  margin-right: 0.8rem;
+}
+
+.achievementItem strong {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.achievementItem p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  line-height: 1.3;
+}
+
+.moreAchievements {
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Editor Header */
+.editorHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.editorHeader h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.stats {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.statItem {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.statItem strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #3498db;
+  font-weight: 700;
+}
+
+/* Form Groups */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wordProgress {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.milestone {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  animation: celebrationPulse 2s ease-in-out;
+}
+
+@keyframes celebrationPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Title Input */
+.titleInput {
+  font-size: 1.1rem;
+  padding: 0.8rem 1rem;
+}
+
+/* Content Editor */
+.contentEditor {
+  width: 100%;
+  min-height: 300px;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contentEditor:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.contentEditor::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Tags */
+.tagContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.removeTag {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.removeTag:hover {
+  opacity: 1;
+}
+
+.tagInput {
+  border: none;
+  background: transparent;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+.tagInput:focus {
+  outline: none;
+}
+
+.tagInput::placeholder {
+  color: #999;
+}
+
+/* Checkbox */
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.8rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.checkboxLabel:hover {
+  background: #f1f3f4;
+}
+
+.checkbox {
+  margin-right: 0.8rem;
+  width: 18px;
+  height: 18px;
+  accent-color: #3498db;
+}
+
+.checkboxText {
+  color: #555;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.actionButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+}
+
+/* Writing Tips */
+.writingTips {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+  border-radius: 16px;
+  border-left: 4px solid #e17055;
+}
+
+.writingTips h4 {
+  margin: 0 0 1rem 0;
+  color: #2d3436;
+  font-size: 1.1rem;
+}
+
+.writingTips ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #2d3436;
+}
+
+.writingTips li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .editorContainer {
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 12px;
+  }
+  
+  .editorHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .stats {
+    align-self: stretch;
+    justify-content: space-around;
+  }
+  
+  .achievementNotification {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    max-width: none;
+  }
+  
+  .actionButtons {
+    flex-direction: column-reverse;
+  }
+  
+  .wordProgress {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .editorContainer {
+    padding: 1rem;
+  }
+  
+  .contentEditor {
+    min-height: 250px;
+    font-size: 0.95rem;
+  }
+  
+  .milestone {
+    font-size: 0.7rem;
+    padding: 0.1rem 0.4rem;
+  }
+}
+
+/* Accessibility */
+.editorContainer:focus-within {
+  box-shadow: 0 8px 32px rgba(52, 152, 219, 0.15);
+}
+
+.tag:focus,
+.removeTag:focus {
+  outline: 2px solid #3498db;
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.contentEditor:disabled {
+  background: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .editorContainer {
+    background: #2c3e50;
+    color: #ecf0f1;
+  }
+  
+  .editorHeader h2 {
+    color: #ecf0f1;
+  }
+  
+  .label {
+    color: #ecf0f1;
+  }
+  
+  .contentEditor {
+    background: #34495e;
+    border-color: #4a6584;
+    color: #ecf0f1;
+  }
+  
+  .contentEditor::placeholder {
+    color: #95a5a6;
+  }
+  
+  .tagContainer {
+    background: #34495e;
+    border-color: #4a6584;
+  }
+  
+  .checkboxLabel {
+    background: #34495e;
+  }
+  
+  .checkboxLabel:hover {
+    background: #3c5469;
+  }
+}

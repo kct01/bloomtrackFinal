@@ -1,0 +1,367 @@
+/* Award Ribbon Styles */
+
+.ribbonContainer {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+}
+
+.ribbonContainer:hover {
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.2));
+}
+
+/* Ribbon Sizes */
+.small {
+  --ribbon-width: 60px;
+  --ribbon-height: 75px;
+  --icon-size: 1.2rem;
+  --title-size: 0.65rem;
+  --desc-size: 0.55rem;
+}
+
+.medium {
+  --ribbon-width: 80px;
+  --ribbon-height: 100px;
+  --icon-size: 1.5rem;
+  --title-size: 0.75rem;
+  --desc-size: 0.65rem;
+}
+
+.large {
+  --ribbon-width: 100px;
+  --ribbon-height: 130px;
+  --icon-size: 2rem;
+  --title-size: 0.875rem;
+  --desc-size: 0.75rem;
+}
+
+/* Ribbon Structure */
+.ribbon {
+  position: relative;
+  width: var(--ribbon-width);
+  height: var(--ribbon-height);
+}
+
+/* Ribbon Top (Circle) */
+.ribbonTop {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(var(--ribbon-width) * 0.8);
+  height: calc(var(--ribbon-width) * 0.8);
+  border-radius: 50%;
+  background: var(--ribbon-gradient);
+  border: 3px solid var(--ribbon-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.ribbonIcon {
+  font-size: var(--icon-size);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Ribbon Body */
+.ribbonBody {
+  position: absolute;
+  top: calc(var(--ribbon-width) * 0.5);
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(var(--ribbon-width) * 0.9);
+  height: calc(var(--ribbon-height) * 0.4);
+  background: var(--ribbon-gradient);
+  border: 2px solid var(--ribbon-border);
+  border-radius: 8px;
+  padding: 0.5rem;
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.ribbonTitle {
+  font-size: var(--title-size);
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0 0 0.25rem;
+  line-height: 1.2;
+}
+
+.ribbonDescription {
+  font-size: var(--desc-size);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Ribbon Tails */
+.ribbonTails {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(var(--ribbon-width) * 0.6);
+  height: calc(var(--ribbon-height) * 0.3);
+  z-index: 1;
+  display: flex;
+  gap: 4px;
+}
+
+.ribbonTail {
+  flex: 1;
+  background: var(--ribbon-gradient);
+  border: 2px solid var(--ribbon-border);
+  border-top: none;
+  position: relative;
+}
+
+.ribbonTail::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: calc(var(--ribbon-width) * 0.15) solid transparent;
+  border-right: calc(var(--ribbon-width) * 0.15) solid transparent;
+  border-top: 8px solid var(--ribbon-border);
+}
+
+/* Pregnancy-themed Color Variants */
+.bronze {
+  --ribbon-gradient: linear-gradient(135deg, #F4A6CD, #FFB5A7, #FFDAB9);
+  --ribbon-border: #DB7093;
+}
+
+.silver {
+  --ribbon-gradient: linear-gradient(135deg, #C8A8E9, #DDA0DD, #E6E6FA);
+  --ribbon-border: #9370DB;
+}
+
+.gold {
+  --ribbon-gradient: linear-gradient(135deg, #A8D8A8, #98FB98, #7FB069);
+  --ribbon-border: #228B22;
+}
+
+.platinum {
+  --ribbon-gradient: linear-gradient(135deg, #FFE4E1, #F0F8FF, #FFF8DC);
+  --ribbon-border: #CD853F;
+}
+
+.diamond {
+  --ribbon-gradient: linear-gradient(135deg, #FFE4E6, #FFF0F5, #FFFACD);
+  --ribbon-border: #FF69B4;
+}
+
+/* Special pregnancy-themed colors */
+.pink {
+  --ribbon-gradient: linear-gradient(135deg, #F4A6CD, #FFB5A7, #FFC0CB);
+  --ribbon-border: #DB7093;
+}
+
+.peach {
+  --ribbon-gradient: linear-gradient(135deg, #FFB5A7, #FFDAB9, #FFCCCB);
+  --ribbon-border: #CD853F;
+}
+
+.lavender {
+  --ribbon-gradient: linear-gradient(135deg, #C8A8E9, #DDA0DD, #E6E6FA);
+  --ribbon-border: #9370DB;
+}
+
+.sage {
+  --ribbon-gradient: linear-gradient(135deg, #A8D8A8, #98FB98, #90EE90);
+  --ribbon-border: #228B22;
+}
+
+/* New Badge */
+.newBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+  color: white;
+  font-size: 0.625rem;
+  font-weight: 700;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  z-index: 10;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(255, 107, 107, 0.4);
+}
+
+/* Award Date */
+.awardDate {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.625rem;
+  color: #6B6862;
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Sparkle Effects */
+.sparkles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.sparkle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #FFD700;
+  border-radius: 50%;
+  animation: sparkle 2s infinite;
+}
+
+.sparkle:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.sparkle:nth-child(3) {
+  bottom: 40%;
+  left: 15%;
+  animation-delay: 1s;
+}
+
+.sparkle:nth-child(4) {
+  bottom: 30%;
+  right: 20%;
+  animation-delay: 1.5s;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Hover Effects */
+.ribbonContainer:hover .sparkle {
+  animation-duration: 1s;
+}
+
+.ribbonContainer:hover .ribbonTop {
+  transform: translateX(-50%) scale(1.05);
+}
+
+/* Focus States */
+.ribbonContainer:focus-visible {
+  outline: 3px solid var(--theme-primary);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .small {
+    --ribbon-width: 70px;
+    --ribbon-height: 90px;
+    --icon-size: 1.25rem;
+    --title-size: 0.7rem;
+    --desc-size: 0.6rem;
+  }
+
+  .medium {
+    --ribbon-width: 85px;
+    --ribbon-height: 110px;
+    --icon-size: 1.75rem;
+    --title-size: 0.8rem;
+    --desc-size: 0.7rem;
+  }
+
+  .large {
+    --ribbon-width: 100px;
+    --ribbon-height: 130px;
+    --icon-size: 2rem;
+    --title-size: 0.875rem;
+    --desc-size: 0.75rem;
+  }
+
+  .ribbonDescription {
+    display: none;
+  }
+
+  .awardDate {
+    font-size: 0.6rem;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .ribbonContainer {
+    filter: contrast(1.2);
+  }
+
+  .ribbonTop,
+  .ribbonBody,
+  .ribbonTail {
+    border-width: 3px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .sparkle {
+    animation: none;
+    opacity: 0.5;
+  }
+
+  .newBadge {
+    animation: none;
+  }
+
+  .ribbonContainer:hover .ribbonTop {
+    transform: translateX(-50%);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .sparkles,
+  .newBadge {
+    display: none;
+  }
+}

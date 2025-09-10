@@ -1,0 +1,364 @@
+/* Notification Settings Component Styles */
+
+.notificationSettings {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-4);
+}
+
+.header h3 {
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xl);
+}
+
+.description {
+  color: var(--color-text-medium);
+  font-size: var(--text-base);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Alert Styles */
+.alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid;
+}
+
+.alert[data-type="error"] {
+  background: rgba(211, 47, 47, 0.1);
+  border-color: rgba(211, 47, 47, 0.3);
+  color: #d32f2f;
+}
+
+.alert[data-type="warning"] {
+  background: rgba(255, 152, 0, 0.1);
+  border-color: rgba(255, 152, 0, 0.3);
+  color: #f57c00;
+}
+
+.alert[data-type="info"] {
+  background: rgba(33, 150, 243, 0.1);
+  border-color: rgba(33, 150, 243, 0.3);
+  color: #1976d2;
+}
+
+.alertIcon {
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+.alert strong {
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.alert p {
+  margin: 0;
+  font-size: var(--text-sm);
+  line-height: 1.4;
+}
+
+/* Permission Section */
+.permissionSection {
+  background: var(--color-white);
+  border: 2px solid var(--color-soft-gray);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.permissionStatus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.statusLabel {
+  font-weight: var(--font-semibold);
+  color: var(--color-text-dark);
+}
+
+.statusText {
+  font-weight: var(--font-bold);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+}
+
+.statusText.success {
+  background: rgba(76, 175, 80, 0.1);
+  color: #388e3c;
+}
+
+.statusText.error {
+  background: rgba(211, 47, 47, 0.1);
+  color: #d32f2f;
+}
+
+.statusText.warning {
+  background: rgba(255, 152, 0, 0.1);
+  color: #f57c00;
+}
+
+.permissionActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.enableButton {
+  background: linear-gradient(135deg, var(--color-soft-pink), var(--color-warm-peach)) !important;
+  color: white !important;
+  border: none !important;
+  padding: var(--space-3) var(--space-5) !important;
+  font-size: var(--text-base) !important;
+  font-weight: var(--font-semibold) !important;
+}
+
+.enableButton:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(244, 166, 205, 0.3) !important;
+}
+
+.permissionNote {
+  font-size: var(--text-sm);
+  color: var(--color-text-medium);
+  max-width: 400px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.testSection {
+  margin-top: var(--space-2);
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testButton {
+  background: rgba(244, 166, 205, 0.1) !important;
+  color: var(--color-soft-pink) !important;
+  border: 1px solid var(--color-soft-pink) !important;
+}
+
+.testButton:hover {
+  background: rgba(244, 166, 205, 0.2) !important;
+}
+
+.demoButton {
+  background: linear-gradient(135deg, var(--color-warm-peach), var(--color-soft-pink)) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.demoButton:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(255, 181, 167, 0.3) !important;
+}
+
+/* Preferences Section */
+.preferencesSection {
+  background: var(--color-white);
+  border: 2px solid var(--color-soft-gray);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+}
+
+.preferencesSection h4 {
+  color: var(--color-text-dark);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-lg);
+  text-align: center;
+}
+
+.preferencesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.preferenceItem {
+  border: 1px solid rgba(244, 166, 205, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: all var(--transition-normal);
+}
+
+.preferenceItem:hover {
+  border-color: rgba(244, 166, 205, 0.4);
+  background: rgba(244, 166, 205, 0.02);
+}
+
+.preferenceHeader {
+  margin-bottom: var(--space-2);
+}
+
+.preferenceLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: var(--font-semibold);
+  color: var(--color-text-dark);
+  cursor: pointer;
+  font-size: var(--text-base);
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-soft-pink);
+  cursor: pointer;
+}
+
+.preferenceDescription {
+  color: var(--color-text-medium);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  margin: 0;
+  margin-left: var(--space-5);
+}
+
+.subPreference {
+  margin-top: var(--space-3);
+  margin-left: var(--space-5);
+  padding: var(--space-3);
+  background: rgba(244, 166, 205, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.subLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-dark);
+  font-weight: var(--font-medium);
+}
+
+.select,
+.timeInput {
+  padding: var(--space-2);
+  border: 1px solid var(--color-soft-gray);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  color: var(--color-text-dark);
+  background: var(--color-white);
+  min-width: 140px;
+}
+
+.select:focus,
+.timeInput:focus {
+  outline: none;
+  border-color: var(--color-soft-pink);
+  box-shadow: 0 0 0 2px rgba(244, 166, 205, 0.2);
+}
+
+.setupActions {
+  margin-top: var(--space-5);
+  text-align: center;
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(244, 166, 205, 0.2);
+}
+
+.setupButton {
+  background: linear-gradient(135deg, var(--color-sage-green), var(--color-sage-green)) !important;
+  color: white !important;
+  border: none !important;
+  padding: var(--space-3) var(--space-6) !important;
+  font-weight: var(--font-semibold) !important;
+}
+
+.setupButton:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(168, 216, 168, 0.3) !important;
+  filter: brightness(1.1) !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .notificationSettings {
+    padding: 0 var(--space-2);
+  }
+  
+  .permissionSection,
+  .preferencesSection {
+    padding: var(--space-4);
+  }
+  
+  .permissionStatus {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  
+  .statusLabel {
+    font-size: var(--text-sm);
+  }
+  
+  .preferenceLabel {
+    font-size: var(--text-sm);
+  }
+  
+  .subPreference {
+    margin-left: var(--space-3);
+  }
+  
+  .preferenceDescription {
+    margin-left: var(--space-4);
+  }
+  
+  .subLabel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+  
+  .select,
+  .timeInput {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .notificationSettings {
+    color: var(--color-text-light);
+  }
+  
+  .permissionSection,
+  .preferencesSection {
+    background: var(--color-gray-dark);
+    border-color: var(--color-gray-medium);
+  }
+  
+  .preferenceItem {
+    border-color: rgba(244, 166, 205, 0.3);
+  }
+  
+  .preferenceItem:hover {
+    background: rgba(244, 166, 205, 0.1);
+  }
+  
+  .select,
+  .timeInput {
+    background: var(--color-gray-dark);
+    border-color: var(--color-gray-medium);
+    color: var(--color-text-light);
+  }
+}

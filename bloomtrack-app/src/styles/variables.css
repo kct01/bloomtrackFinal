@@ -1,0 +1,183 @@
+
+/* BloomTrack CSS Variables - Complete File */
+
+:root {
+  /* ===========================================
+     PRIMARY MOTHERHOOD COLORS
+     =========================================== */
+  --color-soft-pink: #F4A6CD;         /* Nurturing, feminine, comfort */
+  --color-warm-peach: #FFB5A7;        /* Growth, warmth, support */
+  --color-gentle-lavender: #C8A8E9;   /* Calm, peace, spiritual */
+  --color-sage-green: #A8D8A8;        /* Nature, health, balance */
+  --color-cream-white: #FFF8F0;       /* Purity, new beginnings */
+  
+  /* Supporting warm tones */
+  --color-rose-gold: #E8B4B8;         /* Elegance, celebration */
+  --color-soft-coral: #FFB3BA;        /* Joy, vitality */
+  --color-mint-green: #B5E7A0;        /* Fresh, growth */
+
+  /* ===========================================
+     NEUTRAL COLORS
+     =========================================== */
+  --color-white: #FFFFFF;
+  --color-warm-white: #FEFCF8;
+  --color-light-cream: #FAF7F2;
+  --color-soft-gray: #F5F3F0;
+  --color-medium-gray: #E8E6E3;
+  --color-warm-gray: #D1CFC8;
+  --color-text-light: #A8A6A1;
+  --color-text-medium: #6B6862;
+  --color-text-dark: #4A453F;
+  --color-text-primary: #2D2A24;
+  
+  /* Semantic colors */
+  --color-success: #7FB069;
+  --color-warning: #F4A261;
+  --color-error: #E76F51;
+  --color-info: #457B9D;
+
+  /* ===========================================
+     TRIMESTER COLORS
+     =========================================== */
+  --color-trimester-1: #FFE5E5;       /* Soft pink - new beginnings */
+  --color-trimester-2: #FFF0E5;       /* Warm peach - growth */
+  --color-trimester-3: #E5F5E5;       /* Gentle green - preparation */
+  
+  /* Progress bar gradients */
+  --gradient-trimester-1: linear-gradient(90deg, #F4A6CD, #FFB5A7);
+  --gradient-trimester-2: linear-gradient(90deg, #FFB5A7, #C8A8E9);
+  --gradient-trimester-3: linear-gradient(90deg, #C8A8E9, #A8D8A8);
+  --gradient-celebration: linear-gradient(135deg, #F4A6CD, #FFB5A7, #C8A8E9);
+
+  /* ===========================================
+     TYPOGRAPHY
+     =========================================== */
+  --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                  'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-secondary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
+                    'Roboto', sans-serif;
+  --font-decorative: 'Dancing Script', cursive;
+
+  /* Font sizes */
+  --text-xs: 0.75rem;     /* 12px - Small labels */
+  --text-sm: 0.875rem;    /* 14px - Body small */
+  --text-base: 1rem;      /* 16px - Body text */
+  --text-lg: 1.125rem;    /* 18px - Large body */
+  --text-xl: 1.25rem;     /* 20px - Small headings */
+  --text-2xl: 1.5rem;     /* 24px - Card titles */
+  --text-3xl: 1.875rem;   /* 30px - Section headers */
+  --text-4xl: 2.25rem;    /* 36px - Page titles */
+  --text-5xl: 3rem;       /* 48px - Hero titles */
+  
+  /* Line heights */
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  
+  /* Font weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* ===========================================
+     SPACING SYSTEM (8px base)
+     =========================================== */
+  --space-1: 0.25rem;   /* 4px */
+  --space-2: 0.5rem;    /* 8px */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.25rem;   /* 20px */
+  --space-6: 1.5rem;    /* 24px */
+  --space-8: 2rem;      /* 32px */
+  --space-10: 2.5rem;   /* 40px */
+  --space-12: 3rem;     /* 48px */
+  --space-16: 4rem;     /* 64px */
+  --space-20: 5rem;     /* 80px */
+
+  /* ===========================================
+     LAYOUT & CONTAINERS
+     =========================================== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+
+  /* ===========================================
+     BORDER RADIUS (soft, nurturing)
+     =========================================== */
+  --radius-sm: 0.5rem;    /* 8px */
+  --radius-md: 0.75rem;   /* 12px */
+  --radius-lg: 1rem;      /* 16px */
+  --radius-xl: 1.5rem;    /* 24px */
+  --radius-2xl: 2rem;     /* 32px */
+  --radius-full: 9999px;  /* Full rounded */
+
+  /* ===========================================
+     SHADOWS (gentle, nurturing)
+     =========================================== */
+  --shadow-soft: 0 2px 8px rgba(244, 166, 205, 0.1);
+  --shadow-medium: 0 4px 16px rgba(244, 166, 205, 0.15);
+  --shadow-strong: 0 8px 32px rgba(244, 166, 205, 0.2);
+  --shadow-celebration: 0 8px 32px rgba(255, 181, 167, 0.3);
+  
+  /* Standard shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  /* ===========================================
+     TRANSITIONS
+     =========================================== */
+  --transition-fast: 200ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* ===========================================
+     BREAKPOINTS
+     =========================================== */
+  --bp-xs: 480px;    /* Small phones */
+  --bp-sm: 640px;    /* Large phones */
+  --bp-md: 768px;    /* Tablets */
+  --bp-lg: 1024px;   /* Small desktops */
+  --bp-xl: 1280px;   /* Large desktops */
+
+  /* ===========================================
+     Z-INDEX SCALE
+     =========================================== */
+  --z-behind: -1;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1010;
+  --z-popover: 1020;
+  --z-skip-nav: 1030;
+  --z-toast: 1040;
+
+  /* ===========================================
+     COMPONENT DEFAULTS
+     =========================================== */
+  /* Form elements */
+  --form-border-radius: var(--radius-lg);
+  --form-border-color: var(--color-medium-gray);
+  --form-border-color-focus: var(--color-soft-pink);
+  --form-background: var(--color-white);
+  --form-text-color: var(--color-text-primary);
+  --form-placeholder-color: var(--color-text-light);
+
+  /* Button styles */
+  --btn-border-radius: var(--radius-lg);
+  --btn-padding-y: var(--space-3);
+  --btn-padding-x: var(--space-6);
+  --btn-font-weight: var(--font-medium);
+  --btn-transition: all var(--transition-normal);
+
+  /* Card styles */
+  --card-border-radius: var(--radius-xl);
+  --card-padding: var(--space-6);
+  --card-background: var(--color-white);
+  --card-shadow: var(--shadow-soft);
+}

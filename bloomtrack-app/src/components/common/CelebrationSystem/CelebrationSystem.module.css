@@ -1,0 +1,271 @@
+/* Celebration System Styles */
+
+.celebrationModal {
+  z-index: 10000;
+}
+
+.celebrationContent {
+  position: relative;
+  padding: var(--space-8);
+  text-align: center;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  animation: celebration-entrance 0.8s ease-out;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Color Themes */
+.celebrationContent.pink {
+  background: linear-gradient(135deg, #FFE5E5, #FFF0F0);
+  border: 3px solid var(--color-soft-pink);
+  box-shadow: 0 20px 40px rgba(244, 166, 205, 0.3);
+}
+
+.celebrationContent.peach {
+  background: linear-gradient(135deg, #FFF0E5, #FFF8F0);
+  border: 3px solid var(--color-warm-peach);
+  box-shadow: 0 20px 40px rgba(255, 181, 167, 0.3);
+}
+
+.celebrationContent.green {
+  background: linear-gradient(135deg, #E5F5E5, #F0FFF0);
+  border: 3px solid var(--color-sage-green);
+  box-shadow: 0 20px 40px rgba(168, 216, 168, 0.3);
+}
+
+.celebrationContent.blue {
+  background: linear-gradient(135deg, #E5F0FF, #F0F8FF);
+  border: 3px solid var(--color-gentle-lavender);
+  box-shadow: 0 20px 40px rgba(200, 168, 233, 0.3);
+}
+
+.celebrationContent.lavender {
+  background: linear-gradient(135deg, #F0E5FF, #F8F0FF);
+  border: 3px solid var(--color-gentle-lavender);
+  box-shadow: 0 20px 40px rgba(200, 168, 233, 0.3);
+}
+
+.celebrationContent.gold {
+  background: linear-gradient(135deg, #FFF8E5, #FFFEF0);
+  border: 3px solid #FFD700;
+  box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+}
+
+/* Celebration Header */
+.celebrationHeader {
+  margin-bottom: var(--space-6);
+}
+
+.celebrationIcon {
+  font-size: 4rem;
+  margin-bottom: var(--space-4);
+  animation: celebration-bounce 1s ease-out infinite;
+}
+
+.celebrationTitle {
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text-dark);
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Celebration Message */
+.celebrationMessage {
+  margin-bottom: var(--space-6);
+}
+
+.celebrationMessage p {
+  font-size: var(--text-lg);
+  color: var(--color-text-medium);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Celebration Actions */
+.celebrationActions {
+  margin-bottom: var(--space-4);
+}
+
+.celebrationButton {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-lg);
+  font-weight: var(--font-bold);
+  border-radius: var(--radius-2xl);
+  background: linear-gradient(135deg, var(--color-soft-pink), var(--color-warm-peach));
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  animation: celebration-pulse 2s ease-in-out infinite;
+}
+
+.celebrationButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(244, 166, 205, 0.4);
+}
+
+/* Decorative Elements */
+.celebrationDecorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.decoration {
+  position: absolute;
+  font-size: var(--text-2xl);
+  opacity: 0.6;
+  animation: decoration-float 4s ease-in-out infinite;
+}
+
+.decoration:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.decoration:nth-child(2) {
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.decoration:nth-child(3) {
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.decoration:nth-child(4) {
+  bottom: 15%;
+  right: 10%;
+  animation-delay: 3s;
+}
+
+/* Confetti Particles */
+.confettiParticle {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: confetti-fall 3s ease-out forwards;
+  z-index: 10001;
+}
+
+/* Animations */
+@keyframes celebration-entrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes celebration-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes celebration-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 4px 15px rgba(244, 166, 205, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(244, 166, 205, 0.5);
+  }
+}
+
+@keyframes decoration-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(5deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(10deg);
+  }
+  75% {
+    transform: translateY(-8px) rotate(-5deg);
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .celebrationContent {
+    padding: var(--space-6);
+    margin: var(--space-4);
+  }
+  
+  .celebrationIcon {
+    font-size: 3rem;
+  }
+  
+  .celebrationTitle {
+    font-size: var(--text-2xl);
+  }
+  
+  .celebrationMessage p {
+    font-size: var(--text-base);
+  }
+  
+  .celebrationButton {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-base);
+  }
+  
+  .decoration {
+    font-size: var(--text-xl);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .celebrationContent,
+  .celebrationIcon,
+  .celebrationButton,
+  .decoration,
+  .confettiParticle {
+    animation: none;
+  }
+  
+  .celebrationButton:hover {
+    transform: none;
+  }
+}

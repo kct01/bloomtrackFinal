@@ -1,0 +1,1 @@
+export { default, RIBBON_TYPES } from './AwardRibbon';
