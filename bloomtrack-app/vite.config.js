@@ -7,5 +7,14 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCaseOnly'
     }
-  }
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
